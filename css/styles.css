@@ -1,0 +1,46 @@
+body{
+    background-image: url("../img/Barbershop\ \(2\).jpg");
+}
+
+.navbar{
+    background-color:rgba(62, 180, 137,0.6);
+}
+
+.opaque{
+    background-color: #343434;
+}
+
+.opaque a{
+    color: white;
+}
+
+.opaque .active{
+    background-color: black;
+    margin: 1px solid white;
+}
+
+.opaque .btn{
+    margin-left: 1px solid rgba(62, 180, 137,1);
+}
+
+.border-rounded{
+    border-radius: 2rem;
+}
+
+.canvas{
+    background: rgba(0,0,0,0.6);
+    color: rgba(242, 242, 242, 0.8)
+}
+
+.standout{
+    color: rgba(62, 180, 137,1);
+}
+
+.book-button{
+    background-color: rgba(62, 180, 137,1);
+}
+
+.increase{
+    font-size: 6rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
