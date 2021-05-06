@@ -1,8 +1,9 @@
 body{
-    background-image: url("../img/Barbershop\ \(2\).jpg");
+    background-image: url("../img/jonathan-cooper-sS3qRFsKZlg-unsplash.jpg");
+    background-size: cover;
 }
 
-.navbar{
+bb.navbar{
     background-color:rgba(62, 180, 137,0.6);
 }
 
@@ -10,13 +11,12 @@ body{
     background-color: #343434;
 }
 
-.opaque a{
+.link a{
     color: white;
 }
 
-.opaque .active{
-    background-color: black;
-    margin: 1px solid white;
+.link .active{
+    color:rgba(62, 180, 137,0.6);
 }
 
 .opaque .btn{
@@ -40,7 +40,16 @@ body{
     background-color: rgba(62, 180, 137,1);
 }
 
-.increase{
-    font-size: 6rem;
+.copyright{
+    background-color: rgba(62, 180, 137,0.7);
+}
+
+.decrease{
+    font-size: 0.5rem;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+.margin_0{
+    margin-left: 0;
+    margin-right: 0;
 }
