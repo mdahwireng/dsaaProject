@@ -1,14 +1,52 @@
-body{
+.index{
     background-image: url("../img/index_bg.jpg");
     background-size: cover;
 }
 
-bb.navbar{
-    background-color:rgba(62, 180, 137,0.6);
+.services{
+    background-image: url("../img/services/service_bg.jpg");
+    background-size: cover;
 }
 
 .opaque{
     background-color: #343434;
+}
+
+.black{
+    background-color:rgba(0,0,0,0.6);
+}
+
+.nav-black{
+    background-color:rgba(0,0,0,0.9);
+}
+
+.white{
+    background-color: rgba(242, 242, 242, 0.6);
+}
+
+.card-img{
+    width: 100%;
+    height: 9vw;
+    object-fit:cover;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 6vw;
+    object-fit:scale-down;
+}
+
+.btn-bg{
+    background-color: rgba(62, 180, 137,1);
+    border-width: 0.1rem;
+}
+
+h5{
+    text-align: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
 }
 
 .link a{
