@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <title>Alpha Male Grooming</title>
     </head>
-    <body class="services">
+    <body class="index">
         <nav class="nav-black sticky-top">
             <div class="navbar navbar-dark navbar-expand-md justify-content-between">
                 <img src="img/logo_cream.png" alt="logo"class="nav-item navbar-brand" height="100">
@@ -40,14 +40,14 @@
         <!-- Book Modal -->
         <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content modal-bg">
+                <div class="modal-content index text-white">
                     <div class="modal-header">
                     <h4 class="modal-title">Book A Session</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body canvas">
                         <form method="post">
                             <h6>Personal Details</h6>
                             <div class="form-group row">
@@ -125,7 +125,7 @@
 
                             <div class="float-right">
                                 <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-bg shadow-none">Submit</button>
+                                <button type="submit" class="btn btn-bg shadow-none">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -137,137 +137,141 @@
             <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
             <li class="breadcrumb-item active">Services</li>
         </ol>
-
-        <h2 class="text-center text-white"> Services Rendered</h2>
         <!--the services div-->
-        <div class="container container-fluid border-bottom">
-            <div class="row no-gutters">
-                <!-- column 1 of 3-->
-                <div class="col col-md-4 pr-1">
-                    <!-- column 1 item 1-->
-                    <div class="card black text-white mt-2" id="hair_cut">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 m-auto">
-                                <img class="img-fluid card-img" src="img/services/hair_cut.jpg" alt="hair_cutting">
+        <div class="row row-content">
+            <div class="container container-fluid border-bottom">
+                <h2 class="text-white"> Services Rendered</h2>
+                <div class="row no-gutters">
+                    <!-- column 1 of 3-->
+                    <div class="col col-md-4 pr-1">
+                        <!-- column 1 item 1-->
+                        <div class="card black text-white mt-2" id="hair_cut">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 m-auto">
+                                    <img class="img-fluid card-img" src="img/services/hair_cut.jpg" alt="hair_cutting">
+                                </div>
+                                <div class="col-md-8 m-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-heading">
+                                            Hair Cutting
+                                        </h4> 
+                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-8 m-auto">
-                                <div class="card-body">
-                                    <h5 class="card-heading">
-                                        Hair Cutting
-                                    </h4> 
-                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                        Book
-                                    </button>
+                        </div>
+    
+                        <!-- column 1 item 2-->
+                        <div class="card black text-white mt-1 mb-3" id="hair_coloring">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 m-auto">
+                                    <img class="img-fluid card-img" src="img/services/hair_coloring_2.jpg" alt="hair coloring">
+                                </div>
+                                <div class="col-md-8 m-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-heading">
+                                            Hair coloring
+                                        </h4> 
+                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <!-- column 2 of 3-->
+                    <div class="col col-md-4 pr-1">
+                        <!-- column 2 item 1-->
+                        <div class="card black text-white mt-2" id="hair_styling">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 m-auto">
+                                    <img class="img-fluid card-img" src="img/services/hair_styling.png" alt="hair_styling">
+                                </div>
+                                <div class="col-md-8 m-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-heading">
+                                            &nbsp;Hair &nbsp;Styling 
+                                        </h5> 
+                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- column 2 item 2-->
+                        <div class="card black text-white mb-3 mt-1">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 m-auto" id="hair_locking">
+                                    <img class="img-fluid card-img" src="img/services/dreadlockjpg.jpg" alt="hair_locking">
+                                </div>
+                                <div class="col-md-8 m-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-heading">
+                                            Hair Locking
+                                        </h5> 
+                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- column 1 item 2-->
-                    <div class="card black text-white mt-1 mb-3" id="hair_coloring">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 m-auto">
-                                <img class="img-fluid card-img" src="img/services/hair_coloring_2.jpg" alt="hair coloring">
-                            </div>
-                            <div class="col-md-8 m-auto">
-                                <div class="card-body">
-                                    <h5 class="card-heading">
-                                        Hair coloring
-                                    </h4> 
-                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                        Book
-                                    </button>
+    
+    
+                    <!--column 3 0r 3-->
+                    <div class="col col-md-4 ml-0">
+                        <!--colum 3 item 1-->
+                        <div class="card black text-white mt-2" id="facial_treatment">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 m-auto">
+                                    <img class="img-fluid card-img" src="img/services/facial_treatment.jpg" alt="facial_treatment">
+                                </div>
+                                <div class="col-md-8 m-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-heading">
+                                            &nbsp;Facial&nbsp; Care&nbsp;
+                                        </h5> 
+                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+    
+                        <!--colum 3 item 2-->
+                        <div class="card black text-white mt-1 mb-3" id="full_massage">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 m-auto">
+                                    <img class="img-fluid card-img" src="img/services/massage.jpg" alt="full_massage">
+                                </div>
+                                <div class="col-md-8 m-auto">
+                                    <div class="card-body">
+                                        <h5 class="card-heading">
+                                            Full Massage
+                                        </h5> 
+                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
-
-                <!-- column 2 of 3-->
-                <div class="col col-md-4 pr-1">
-                    <!-- column 2 item 1-->
-                    <div class="card black text-white mt-2" id="hair_styling">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 m-auto">
-                                <img class="img-fluid card-img" src="img/services/hair_styling.png" alt="hair_styling">
-                            </div>
-                            <div class="col-md-8 m-auto">
-                                <div class="card-body">
-                                    <h5 class="card-heading">
-                                        &nbsp;Hair &nbsp;Styling 
-                                    </h5> 
-                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                        Book
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- column 2 item 2-->
-                    <div class="card black text-white mb-3 mt-1">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 m-auto" id="hair_locking">
-                                <img class="img-fluid card-img" src="img/services/dreadlockjpg.jpg" alt="hair_locking">
-                            </div>
-                            <div class="col-md-8 m-auto">
-                                <div class="card-body">
-                                    <h5 class="card-heading">
-                                        Hair Locking
-                                    </h5> 
-                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                        Book
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!--column 3 0r 3-->
-                <div class="col col-md-4 ml-0">
-                    <!--colum 3 item 1-->
-                    <div class="card black text-white mt-2" id="facial_treatment">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 m-auto">
-                                <img class="img-fluid card-img" src="img/services/facial_treatment.jpg" alt="facial_treatment">
-                            </div>
-                            <div class="col-md-8 m-auto">
-                                <div class="card-body">
-                                    <h5 class="card-heading">
-                                        &nbsp;Facial&nbsp; Care&nbsp;
-                                    </h5> 
-                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                        Book
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--colum 3 item 2-->
-                    <div class="card black text-white mt-1 mb-3" id="full_massage">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 m-auto">
-                                <img class="img-fluid card-img" src="img/services/massage.jpg" alt="full_massage">
-                            </div>
-                            <div class="col-md-8 m-auto">
-                                <div class="card-body">
-                                    <h5 class="card-heading">
-                                        Full Massage
-                                    </h5> 
-                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                        Book
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
             </div>
         </div>
+        
+        
+        
 
         <h2 class="text-white text-center mt-3">The Core Staff</h2>
         <!--the team div-->
