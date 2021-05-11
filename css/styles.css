@@ -108,3 +108,15 @@ input[type="time"]:focus,
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
     outline: 0 none;
   }
+
+  .slide-img{
+      width:100%;
+      height: 8vw;
+      object-fit:cover;
+  }
+
+  .carousel-img{
+    width:100%;
+    height: 25vw;
+    object-fit:cover;
+  }
