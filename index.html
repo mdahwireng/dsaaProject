@@ -1,202 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>Alpha Male Grooming</title>
-    </head>
-    <body class="index">
-        <nav>
-            <div class="navbar navbar-dark navbar-expand-md justify-content-between">
-                <img src="img/logo_cream.png" alt="logo"class="nav-item navbar-brand" height="100">
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Alpha Male Grooming</title>
+</head>
+
+<body class="index">
+    <nav>
+        <div class="navbar navbar-dark navbar-expand-md justify-content-between">
+            <img src="img/logo_cream.png" alt="logo" class="nav-item navbar-brand" height="100">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse justify-content-between collapse btn-group link">
-                    <a class="nav-item nav-link btn active border-right shadow-none" href="index.html">HOME</a>
-                    <a class="nav-item nav-link btn border-left shadow-none"  href="services.html">SERVICES</a>
-                    <a class="nav-item nav-link btn border-left shadow-none"  href="gallery.html">GALLERY</a>
-                    <a class="nav-item nav-link btn border-left shadow-none"  href="message.html">MESSAGE</a>
-                </div>
-            </div> 
-            <div class="navbar-collapse justify-content-between collapse link" id="navbarCollapse">
-                <a class="nav-item nav-link active" href="index.html">HOME</a>
-                <a class="nav-item nav-link"  href="services.html">SERVICES</a>
-                <a class="nav-item nav-link"  href="#">GALLERY</a>
-                <a class="nav-item nav-link"  href="message.html">MESSAGE</a>
+            <div class="navbar-collapse justify-content-between collapse btn-group link">
+                <a class="nav-item nav-link btn active border-right shadow-none" href="index.html">HOME</a>
+                <a class="nav-item nav-link btn border-left shadow-none" href="services.html">SERVICES</a>
+                <a class="nav-item nav-link btn border-left shadow-none" href="gallery.html">GALLERY</a>
+                <a class="nav-item nav-link btn border-left shadow-none" href="message.html">MESSAGE</a>
             </div>
-        </nav>
+        </div>
+        <div class="navbar-collapse justify-content-between collapse link" id="navbarCollapse">
+            <a class="nav-item nav-link active" href="index.html">HOME</a>
+            <a class="nav-item nav-link" href="services.html">SERVICES</a>
+            <a class="nav-item nav-link" href="#">GALLERY</a>
+            <a class="nav-item nav-link" href="message.html">MESSAGE</a>
+        </div>
+    </nav>
 
-        <!-- Book Modal -->
-        <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content index text-white">
-                    <div class="modal-header">
+    <!-- Book Modal -->
+    <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content index text-white">
+                <div class="modal-header">
                     <h4 class="modal-title">Book A Session</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    </div>
-                    <div class="modal-body canvas">
-                        <form method="post">
-                            <h6>Personal Details</h6>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="firstNameInput">
+                </div>
+                <div class="modal-body canvas">
+                    <form method="post">
+                        <h6>Personal Details</h6>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="firstNameInput">
                                     Name
                                 </label>
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="First Name" id="firstNameInput">                      
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="Last Name" id="lastNameInput">
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="First Name" id="firstNameInput" name="first name">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="Last Name" id="lastNameInput" name="last name">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
                                     Email
                                 </label>
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput">                      
-                                <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput" name="email">
+                            <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
                                     Tel
                                 </label>
-                                <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="tel" id="telInput">
-                            </div>
+                            <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="tel" id="telInput" name="tel">
+                        </div>
 
-                            <h6>Booking Details</h6>
-                            <p>Please <b>select</b> what You want to be done for you</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairCutInput" value="hair cut">
-                                <label for="hairCutInput">
+                        <h6>Booking Details</h6>
+                        <p>Please <b>select</b> what You want to be done for you</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairCutInput" value="yes" name="haircut">
+                            <label for="hairCutInput">
                                     Hair Cut
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairStylingInput" value="hair styling">
-                                <label for="hairStylingInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairStylingInput" value="yes" name="hair styling">
+                            <label for="hairStylingInput">
                                     Hair Styling
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairColoringInput" value="hair coloring">
-                                <label for="hairColoringInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairColoringInput" value="yes" name="hair coloring">
+                            <label for="hairColoringInput">
                                     Hair Coloring
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairLockingInput" value="hair locking">
-                                <label for="hairLockingInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairLockingInput" value="yes" name="hair locking">
+                            <label for="hairLockingInput">
                                     Hair Locking
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="facialCareInput" value="facial care">
-                                <label for="facialCareInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="facialCareInput" value="yes" name="facial care">
+                            <label for="facialCareInput">
                                     Facial Care
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="fullMasssageInput" value="full massage">
-                                <label for="fullMasssageInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="fullMasssageInput" value="yes" name="full massage">
+                            <label for="fullMasssageInput">
                                     Full Massage
                                 </label>
-                            </div>
-                            
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="dateInput">
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="dateInput">
                                     Date
                                 </label>
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput">                      
-                                <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput" name="date">
+                            <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
                                     Time
                                 </label>
-                                <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="time" id="timeInput">
-                            </div>
+                            <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="time" id="timeInput" name="time">
+                        </div>
 
-                            <div class="float-right">
-                                <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-bg shadow-none">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-bg shadow-none">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
-        
-        <div class="offset-lg-1 container container-fluid ml-6 align-items-center">
-            <div class="row mt-3">
-                <div class="row mt-2">
-                    <div class="container canvas border-rounded col-sm-7 col-md-6 col-lg-6 ml-3 mr-0" >
-                        <div class="row mt-4">
-                            <div class="container mr-4 ml-4">
-                                <h2>WELCOME</h2>
-                                <p class="text-justify">
-                                    <em class="standout">Alpha Male Grooming</em>, a new class of grooming firm with the mordern man in mind.
-                                    You may be thinking you cannot afford such a luxury. Those of us from <em class="standout">Alpha Male Grooming</em> 
-                                    see it less of a luxury but an opportunity to pamper 
-                                    the body of men and put it in the best shape it could ever be.
-                                    It is our pleasure to serve you.
 
-                                    <blockquote class="blockquote text-center">
-                                        <p class="mb-0">
-                                            <span class="fa fa-quote-left"></span> 
-                                            Luxury it is to you and luxury at an affordable price from us to you as a service to manhood.
-                                            <span class="fa fa-quote-right"></span>
-                                            <footer class="blockquote-footer"><em class="standout">Alpha Male Grooming</em> in 
-                                                <cite>Men Apperance Magazine</cite></footer>
-                                        </p>
-                                    </blockquote>
-                                    </br>
-                                    <em class="standout">Alpha Male Grooming, minty clean and fresh </em> 
-                                </p> 
-                            </div>
+    <div class="offset-lg-1 container container-fluid ml-6 align-items-center">
+        <div class="row mt-3">
+            <div class="row mt-2">
+                <div class="container canvas border-rounded col-sm-7 col-md-6 col-lg-6 ml-3 mr-0">
+                    <div class="row mt-4">
+                        <div class="container mr-4 ml-4">
+                            <h2>WELCOME</h2>
+                            <p class="text-justify">
+                                <em class="standout">Alpha Male Grooming</em>, a new class of grooming firm with the mordern man in mind. You may be thinking you cannot afford such a luxury. Those of us from <em class="standout">Alpha Male Grooming</em>                                see it less of a luxury but an opportunity to pamper the body of men and put it in the best shape it could ever be. It is our pleasure to serve you.
+
+                                <blockquote class="blockquote text-center">
+                                    <p class="mb-0">
+                                        <span class="fa fa-quote-left"></span> Luxury it is to you and luxury at an affordable price from us to you as a service to manhood.
+                                        <span class="fa fa-quote-right"></span>
+                                        <footer class="blockquote-footer"><em class="standout">Alpha Male Grooming</em> in
+                                            <cite>Men Apperance Magazine</cite></footer>
+                                    </p>
+                                </blockquote>
+                                </br>
+                                <em class="standout">Alpha Male Grooming, minty clean and fresh </em>
+                            </p>
                         </div>
                     </div>
-                    <div class="container col col-md-5 ml-2 col-lg-4 my-auto align-items-center" >
-                        <div class="container my-3">
-                            <!-- book-a-session button-->
+                </div>
+                <div class="container col col-md-5 ml-2 col-lg-4 my-auto align-items-center">
+                    <div class="container my-3">
+                        <!-- book-a-session button-->
                         <button type="button" class="col-12 btn btn-lg book-button text-white shadow-none" data-toggle="modal" data-target="#bookModal">
                             Book A Session
                         </button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        
-        <footer>
+
+    <footer>
         <div class="row text-white justify-content-center decrease mt-5">
-                <p class="my-auto">
-            
-                    132, My Street, Bigtown BG23 4YZ, England &nbsp;
-                    <span class="fa fa-circle"></span>
-                    &nbsp; 001-541-754-3010 &nbsp;
-                    <span class="fa fa-circle"></span>
-                    &nbsp; info@alphamale.com
-                </p>
-            </div>
-                
-            <div class="row text-white justify-content-center decrease my-auto">
-                <p class="my-auto">
-                    <span class="fa fa-copyright"></span>
-                    &nbsp; 2021 All RIights Reserved Alpha Male Grooming
-                </p>
-            </div>
-        </footer>       
-        
-        
-       
-        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    </body>
+            <p class="my-auto">
+
+                132, My Street, Bigtown BG23 4YZ, England &nbsp;
+                <span class="fa fa-circle"></span> &nbsp; 001-541-754-3010 &nbsp;
+                <span class="fa fa-circle"></span> &nbsp; info@alphamale.com
+            </p>
+        </div>
+
+        <div class="row text-white justify-content-center decrease my-auto">
+            <p class="my-auto">
+                <span class="fa fa-copyright"></span> &nbsp; 2021 All RIights Reserved Alpha Male Grooming
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
 </html>

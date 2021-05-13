@@ -1,327 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>Alpha Male Grooming</title>
-    </head>
-    <body class="index">
-        <nav class="nav-black sticky-top">
-            <div class="navbar navbar-dark navbar-expand-md justify-content-between">
-                <img src="img/logo_cream.png" alt="logo"class="nav-item navbar-brand" height="100">
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Alpha Male Grooming</title>
+</head>
+
+<body class="index">
+    <nav class="nav-black sticky-top">
+        <div class="navbar navbar-dark navbar-expand-md justify-content-between">
+            <img src="img/logo_cream.png" alt="logo" class="nav-item navbar-brand" height="100">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse justify-content-between collapse btn-group link">
-                    <a class="nav-item nav-link btn border-righ shadow-none" href="index.html">HOME</a>
-                    <a class="nav-item nav-link btn border-left shadow-none active"  href="#">SERVICES</a>
-                    <a class="nav-item nav-link btn border-left shadow-none"  href="gallery.html">GALLERY</a>
-                    <a class="nav-item nav-link btn border-left shadow-none"  href="message.html">MESSAGE</a>
-                </div>
-            </div> 
-            <div class="navbar-collapse justify-content-between collapse link" id="navbarCollapse">
-                <a class="nav-item nav-link" href="index.html">HOME</a>
-                <a class="nav-item nav-link active"  href="services.html">SERVICES</a>
-                <a class="nav-item nav-link"  href="#">GALLERY</a>
-                <a class="nav-item nav-link"  href="message.html">MESSAGE</a>
-            </div> 
-        </nav> 
+            <div class="navbar-collapse justify-content-between collapse btn-group link">
+                <a class="nav-item nav-link btn border-righ shadow-none" href="index.html">HOME</a>
+                <a class="nav-item nav-link btn border-left shadow-none active" href="#">SERVICES</a>
+                <a class="nav-item nav-link btn border-left shadow-none" href="gallery.html">GALLERY</a>
+                <a class="nav-item nav-link btn border-left shadow-none" href="message.html">MESSAGE</a>
+            </div>
+        </div>
+        <div class="navbar-collapse justify-content-between collapse link" id="navbarCollapse">
+            <a class="nav-item nav-link" href="index.html">HOME</a>
+            <a class="nav-item nav-link active" href="services.html">SERVICES</a>
+            <a class="nav-item nav-link" href="#">GALLERY</a>
+            <a class="nav-item nav-link" href="message.html">MESSAGE</a>
+        </div>
+    </nav>
 
-        <!-- Book Modal -->
-        <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content index text-white">
-                    <div class="modal-header">
+    <!-- Book Modal -->
+    <div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content index text-white">
+                <div class="modal-header">
                     <h4 class="modal-title">Book A Session</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    </div>
-                    <div class="modal-body canvas">
-                        <form method="post">
-                            <h6>Personal Details</h6>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="firstNameInput">
+                </div>
+                <div class="modal-body canvas">
+                    <form method="post">
+                        <h6>Personal Details</h6>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="firstNameInput">
                                     Name
                                 </label>
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="First Name" id="firstNameInput">                      
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="Last Name" id="lastNameInput">
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="First Name" id="firstNameInput" name="first name">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="text" placeholder="Last Name" id="lastNameInput" name="last name">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
                                     Email
                                 </label>
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput">                      
-                                <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput" name="email">
+                            <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
                                     Tel
                                 </label>
-                                <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="tel" id="telInput">
-                            </div>
+                            <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="tel" id="telInput" name="tel">
+                        </div>
 
-                            <h6>Booking Details</h6>
-                            <p>Please <b>select</b> what You want to be done for you</p>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairCutInput" value="hair cut">
-                                <label for="hairCutInput">
+                        <h6>Booking Details</h6>
+                        <p>Please <b>select</b> what You want to be done for you</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairCutInput" value="yes" name="haircut">
+                            <label for="hairCutInput">
                                     Hair Cut
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairStylingInput" value="hair styling">
-                                <label for="hairStylingInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairStylingInput" value="yes" name="hair styling">
+                            <label for="hairStylingInput">
                                     Hair Styling
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairColoringInput" value="hair coloring">
-                                <label for="hairColoringInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairColoringInput" value="yes" name="hair coloring">
+                            <label for="hairColoringInput">
                                     Hair Coloring
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="hairLockingInput" value="hair locking">
-                                <label for="hairLockingInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="hairLockingInput" value="yes" name="hair locking">
+                            <label for="hairLockingInput">
                                     Hair Locking
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="facialCareInput" value="facial care">
-                                <label for="facialCareInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="facialCareInput" value="yes" name="facial care">
+                            <label for="facialCareInput">
                                     Facial Care
                                 </label>
-                            </div>
+                        </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input mb-1" type="checkbox" id="fullMasssageInput" value="full massage">
-                                <label for="fullMasssageInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input mb-1" type="checkbox" id="fullMasssageInput" value="yes" name="full massage">
+                            <label for="fullMasssageInput">
                                     Full Massage
                                 </label>
-                            </div>
-                            
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="dateInput">
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="dateInput">
                                     Date
                                 </label>
-                                <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput">                      
-                                <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
+                            <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput" name="date">
+                            <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
                                     Time
                                 </label>
-                                <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="time" id="timeInput">
-                            </div>
+                            <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="time" id="timeInput" name="time">
+                        </div>
 
-                            <div class="float-right">
-                                <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-bg shadow-none">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-bg shadow-none">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <!--breadcrubs-->
-        <ol class="col-12 breadcrumb bg-transparent link fixed">
-            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-            <li class="breadcrumb-item active">Services</li>
-        </ol>
-        <!--the services div-->
-        <div class="row row-content">
-            <div class="container container-fluid border-bottom">
-                <h2 class="text-white"> Services Rendered</h2>
-                <div class="row no-gutters">
-                    <!-- column 1 of 3-->
-                    <div class="col col-md-4 pr-1">
-                        <!-- column 1 item 1-->
-                        <div class="card black text-white mt-2" id="hair_cut">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 m-auto">
-                                    <img class="img-fluid card-img" src="img/services/hair_cut.jpg" alt="hair_cutting">
-                                </div>
-                                <div class="col-md-8 m-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-heading">
-                                            Hair Cutting
-                                        </h4> 
-                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                            Book
-                                        </button>
-                                    </div>
-                                </div>
+    </div>
+    <!--breadcrubs-->
+    <ol class="col-12 breadcrumb bg-transparent link fixed">
+        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+        <li class="breadcrumb-item active">Services</li>
+    </ol>
+    <!--the services div-->
+    <div class="row row-content">
+        <div class="container container-fluid border-bottom">
+            <h2 class="text-white"> Services Rendered</h2>
+            <div class="row no-gutters">
+                <!-- column 1 of 3-->
+                <div class="col col-md-4 pr-1">
+                    <!-- column 1 item 1-->
+                    <div class="card black text-white mt-2" id="hair_cut">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 m-auto">
+                                <img class="img-fluid card-img" src="img/services/hair_cut.jpg" alt="hair_cutting">
                             </div>
-                        </div>
-    
-                        <!-- column 1 item 2-->
-                        <div class="card black text-white mt-1 mb-3" id="hair_coloring">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 m-auto">
-                                    <img class="img-fluid card-img" src="img/services/hair_coloring_2.jpg" alt="hair coloring">
-                                </div>
-                                <div class="col-md-8 m-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-heading">
-                                            Hair coloring
-                                        </h4> 
+                            <div class="col-md-8 m-auto">
+                                <div class="card-body">
+                                    <h5 class="card-heading">
+                                        Hair Cutting
+                                        </h4>
                                         <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
                                             Book
                                         </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
-    
-                    <!-- column 2 of 3-->
-                    <div class="col col-md-4 pr-1">
-                        <!-- column 2 item 1-->
-                        <div class="card black text-white mt-2" id="hair_styling">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 m-auto">
-                                    <img class="img-fluid card-img" src="img/services/hair_styling.png" alt="hair_styling">
-                                </div>
-                                <div class="col-md-8 m-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-heading">
-                                            &nbsp;Hair &nbsp;Styling 
-                                        </h5> 
-                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                            Book
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <!-- column 2 item 2-->
-                        <div class="card black text-white mb-3 mt-1">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 m-auto" id="hair_locking">
-                                    <img class="img-fluid card-img" src="img/services/dreadlockjpg.jpg" alt="hair_locking">
-                                </div>
-                                <div class="col-md-8 m-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-heading">
-                                            Hair Locking
-                                        </h5> 
-                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
-                                            Book
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-    
-                    <!--column 3 0r 3-->
-                    <div class="col col-md-4 ml-0">
-                        <!--colum 3 item 1-->
-                        <div class="card black text-white mt-2" id="facial_treatment">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 m-auto">
-                                    <img class="img-fluid card-img" src="img/services/facial_treatment.jpg" alt="facial_treatment">
-                                </div>
-                                <div class="col-md-8 m-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-heading">
-                                            &nbsp;Facial&nbsp; Care&nbsp;
-                                        </h5> 
+
+                    <!-- column 1 item 2-->
+                    <div class="card black text-white mt-1 mb-3" id="hair_coloring">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 m-auto">
+                                <img class="img-fluid card-img" src="img/services/hair_coloring_2.jpg" alt="hair coloring">
+                            </div>
+                            <div class="col-md-8 m-auto">
+                                <div class="card-body">
+                                    <h5 class="card-heading">
+                                        Hair coloring
+                                        </h4>
                                         <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
                                             Book
                                         </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-    
-                        <!--colum 3 item 2-->
-                        <div class="card black text-white mt-1 mb-3" id="full_massage">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 m-auto">
-                                    <img class="img-fluid card-img" src="img/services/massage.jpg" alt="full_massage">
-                                </div>
-                                <div class="col-md-8 m-auto">
-                                    <div class="card-body">
-                                        <h5 class="card-heading">
-                                            Full Massage
-                                        </h5> 
-                                        <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                    </div>
+
+                </div>
+
+                <!-- column 2 of 3-->
+                <div class="col col-md-4 pr-1">
+                    <!-- column 2 item 1-->
+                    <div class="card black text-white mt-2" id="hair_styling">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 m-auto">
+                                <img class="img-fluid card-img" src="img/services/hair_styling.png" alt="hair_styling">
+                            </div>
+                            <div class="col-md-8 m-auto">
+                                <div class="card-body">
+                                    <h5 class="card-heading">
+                                        &nbsp;Hair &nbsp;Styling
+                                    </h5>
+                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
                                             Book
                                         </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
+
+                    <!-- column 2 item 2-->
+                    <div class="card black text-white mb-3 mt-1">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 m-auto" id="hair_locking">
+                                <img class="img-fluid card-img" src="img/services/dreadlockjpg.jpg" alt="hair_locking">
+                            </div>
+                            <div class="col-md-8 m-auto">
+                                <div class="card-body">
+                                    <h5 class="card-heading">
+                                        Hair Locking
+                                    </h5>
+                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--column 3 0r 3-->
+                <div class="col col-md-4 ml-0">
+                    <!--colum 3 item 1-->
+                    <div class="card black text-white mt-2" id="facial_treatment">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 m-auto">
+                                <img class="img-fluid card-img" src="img/services/facial_treatment.jpg" alt="facial_treatment">
+                            </div>
+                            <div class="col-md-8 m-auto">
+                                <div class="card-body">
+                                    <h5 class="card-heading">
+                                        &nbsp;Facial&nbsp; Care&nbsp;
+                                    </h5>
+                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--colum 3 item 2-->
+                    <div class="card black text-white mt-1 mb-3" id="full_massage">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 m-auto">
+                                <img class="img-fluid card-img" src="img/services/massage.jpg" alt="full_massage">
+                            </div>
+                            <div class="col-md-8 m-auto">
+                                <div class="card-body">
+                                    <h5 class="card-heading">
+                                        Full Massage
+                                    </h5>
+                                    <button class="btn btn-sm btn-block btn-bg shadow-none" type="button" data-toggle="modal" data-target="#bookModal">
+                                            Book
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        
-        
+    </div>
 
-        <h2 class="text-white text-center mt-3">The Core Staff</h2>
-        <!--the team div-->
-        <div class="row mt-2">
-            <div class="container align-items-center offset-2 offset-md-3">
-                <div class="col-2 m-1 d-inline-block" id="CEO">
-                    <img  src="img/services/ceo.jpg" alt="CEO" class="card-img-top rounded-circle d-block">
-                    <p class="d-none d-sm-block small text-center text-white">Halie Sedinam</br><b>Chief Exec. Officer</b></p>
-                    <p class="d-sm-none small text-center text-white">Halie Sedinam</br><b>CEO</b></p>
-                </div>
-    
-                <div class="col-2 m-1 d-inline-block" id="GM">
-                    <img  src="img/services/manager.jpg" alt="GM" class="card-img-top rounded-circle d-block">
-                    <p class="d-none d-sm-block small text-center text-white">Drew Curtis</br><b>General Manager</b></b></p>
-                    <p class="d-sm-none small card-title text-center text-white">Drew Curtis</br><b>GM</b></b></p>
-                </div>
-    
-                <div class="col-2 m-1 d-inline-block" id="LT">
-                    <img  src="img/services/lead therapist.jpg" alt="LT" class="card-img-top rounded-circle d-block">
-                    <p class="d-none d-sm-block small text-center text-white">Mufida Belkisu</br><b>Lead Therapist</b></p>
-                    <p class="d-sm-none small card-title text-center text-white">Mufida Belkisu</br><b>LT</b></p>
-                </div>
-    
-                <div class="col-2 m-1 d-inline-block" id="CSO">
-                    <img  src="img/services/cso.jpg" alt="CSO" class="card-img-top rounded-circle d-block">
-                    <p class="d-none d-sm-block small text-center text-white">Sika Takyiwa</br><b>Client Service Officer</b></p>
-                    <p class="d-sm-none small card-title text-center text-white">Sika Takyiwa</br><b>CSO</b></p>
-                </div>
+
+
+
+    <h2 class="text-white text-center mt-3">The Core Staff</h2>
+    <!--the team div-->
+    <div class="row mt-2">
+        <div class="container align-items-center offset-2 offset-md-3">
+            <div class="col-2 m-1 d-inline-block" id="CEO">
+                <img src="img/services/ceo.jpg" alt="CEO" class="card-img-top rounded-circle d-block">
+                <p class="d-none d-sm-block small text-center text-white">Halie Sedinam</br><b>Chief Exec. Officer</b></p>
+                <p class="d-sm-none small text-center text-white">Halie Sedinam</br><b>CEO</b></p>
+            </div>
+
+            <div class="col-2 m-1 d-inline-block" id="GM">
+                <img src="img/services/manager.jpg" alt="GM" class="card-img-top rounded-circle d-block">
+                <p class="d-none d-sm-block small text-center text-white">Drew Curtis</br><b>General Manager</b></b>
+                </p>
+                <p class="d-sm-none small card-title text-center text-white">Drew Curtis</br><b>GM</b></b>
+                </p>
+            </div>
+
+            <div class="col-2 m-1 d-inline-block" id="LT">
+                <img src="img/services/lead therapist.jpg" alt="LT" class="card-img-top rounded-circle d-block">
+                <p class="d-none d-sm-block small text-center text-white">Mufida Belkisu</br><b>Lead Therapist</b></p>
+                <p class="d-sm-none small card-title text-center text-white">Mufida Belkisu</br><b>LT</b></p>
+            </div>
+
+            <div class="col-2 m-1 d-inline-block" id="CSO">
+                <img src="img/services/cso.jpg" alt="CSO" class="card-img-top rounded-circle d-block">
+                <p class="d-none d-sm-block small text-center text-white">Sika Takyiwa</br><b>Client Service Officer</b></p>
+                <p class="d-sm-none small card-title text-center text-white">Sika Takyiwa</br><b>CSO</b></p>
             </div>
         </div>
+    </div>
 
 
-        <footer>
-            <div class="row text-white justify-content-center decrease mt-5">
-                    <p class="my-auto">
-                
-                        132, My Street, Bigtown BG23 4YZ, England &nbsp;
-                        <span class="fa fa-circle"></span>
-                        &nbsp; 001-541-754-3010 &nbsp;
-                        <span class="fa fa-circle"></span>
-                        &nbsp; info@alphamale.com
-                    </p>
-                </div>
-                    
-                <div class="row text-white justify-content-center decrease my-auto">
-                    <p class="my-auto">
-                        <span class="fa fa-copyright"></span>
-                        &nbsp; 2021 All RIights Reserved Alpha Male Grooming
-                    </p>
-                </div>
-            </footer> 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    </body>
+    <footer>
+        <div class="row text-white justify-content-center decrease mt-5">
+            <p class="my-auto">
+
+                132, My Street, Bigtown BG23 4YZ, England &nbsp;
+                <span class="fa fa-circle"></span> &nbsp; 001-541-754-3010 &nbsp;
+                <span class="fa fa-circle"></span> &nbsp; info@alphamale.com
+            </p>
+        </div>
+
+        <div class="row text-white justify-content-center decrease my-auto">
+            <p class="my-auto">
+                <span class="fa fa-copyright"></span> &nbsp; 2021 All RIights Reserved Alpha Male Grooming
+            </p>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
 </html>
