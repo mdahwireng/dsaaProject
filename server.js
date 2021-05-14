@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
+const connectDB = require("./server/database/connection");
 const app = express();
 dotenv.config({ path: 'config.env' });
 
@@ -29,6 +30,9 @@ app.listen(PORT, () => {
 
 // log request
 app.use(morgan('tiny'));
+
+// mongodb connection
+connectDB();
 
 
 app.use(express.json());
