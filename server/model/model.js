@@ -74,4 +74,4 @@ var schema = new mongoose.Schema({
 
 const Userdb = mongoose.model("userdb", schema);
 
-module.export = Userdb
+module.exports = Userdb
