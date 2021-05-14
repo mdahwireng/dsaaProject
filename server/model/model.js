@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 var schema = new mongoose.schema({
-    "first name": {
+    "first_name": {
         type: String,
         require: true
     },
-    "last name": {
+    "last_name": {
         type: String,
         require: true
     },
@@ -17,32 +17,32 @@ var schema = new mongoose.schema({
         type: Number,
         require: true
     },
-    "hair cut": {
+    "hair_cut": {
         type: String,
         enum: ['yes', 'no'],
         default: 'no'
     },
-    "hair styling": {
+    "hair_styling": {
         type: String,
         enum: ['yes', 'no'],
         default: 'no'
     },
-    "hair coloring": {
+    "hair_coloring": {
         type: String,
         enum: ['yes', 'no'],
         default: 'no'
     },
-    "hair locking": {
+    "hair_locking": {
         type: String,
         enum: ['yes', 'no'],
         default: 'no'
     },
-    "facial care": {
+    "facial_care": {
         type: String,
         enum: ['yes', 'no'],
         default: 'no'
     },
-    "full massage": {
+    "full_massage": {
         type: String,
         enum: ['yes', 'no'],
         default: 'no'
@@ -55,7 +55,7 @@ var schema = new mongoose.schema({
         type: String,
         require: true
     },
-    "start date": {
+    "start_date": {
         type: String
     },
     "Status": {
@@ -63,7 +63,7 @@ var schema = new mongoose.schema({
         enum: ["in progress", "completed", "pending", "absent", "rescheduled"],
         default: "pending"
     },
-    "end date": {
+    "end_date": {
         type: String,
         require: true
     },
