@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
 const connectDB = require("./server/database/connection");
+const controller = require("./server/controller/controller");
 const app = express();
 dotenv.config({ path: 'config.env' });
 
@@ -49,3 +50,7 @@ app.set('views', path.resolve(__dirname, "views"))
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 app.use('/node_modules', express.static(path.resolve(__dirname, "node_modules")));
+
+// API
+
+app.post('/api/users', controller.create);
