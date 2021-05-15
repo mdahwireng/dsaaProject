@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 
 var schema = new mongoose.Schema({
-    "first_name": {
-        type: String,
-        require: true
-    },
-    "last_name": {
+    "name": {
         type: String,
         require: true
     },
@@ -55,17 +51,10 @@ var schema = new mongoose.Schema({
         type: String,
         require: true
     },
-    "start_date": {
-        type: String
-    },
     "Status": {
         type: String,
         enum: ["in progress", "completed", "pending", "absent", "rescheduled"],
         default: "pending"
-    },
-    "end_date": {
-        type: String,
-        require: true
     },
     "comment": {
         type: String
