@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Master View</title>
+</head>
+
+<body>
+    <h3 class="bg-success text-center pb-2"> Transacton Management System </h3>
+    <div class="row table-responsive mt-5">
+        <div class="container col-10">
+            <div>
+                <h4 class="modal-title">Book A Session</h4>
+            </div>
+            <form method="post">
+                <h6>Personal Details</h6>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="NameInput">
+                            Name
+                        </label>
+                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2" type="text" placeholder="First Name and Last Name" id="NameInput" name="name">
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
+                            Email
+                        </label>
+                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput" name="email">
+                    <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
+                            Tel
+                        </label>
+                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="tel" id="telInput" name="tel">
+                </div>
+
+                <h6>Booking Details</h6>
+                <p>Please <b>select</b> what You want to be done for you</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-1" type="checkbox" id="hairCutInput" value="yes" name="hair_cut">
+                    <label for="hairCutInput">
+                            Hair Cut
+                        </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-1" type="checkbox" id="hairStylingInput" value="yes" name="hair_styling">
+                    <label for="hairStylingInput">
+                            Hair Styling
+                        </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-1" type="checkbox" id="hairColoringInput" value="yes" name="hair_coloring">
+                    <label for="hairColoringInput">
+                            Hair Coloring
+                        </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-1" type="checkbox" id="hairLockingInput" value="yes" name="hair_locking">
+                    <label for="hairLockingInput">
+                            Hair Locking
+                        </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-1" type="checkbox" id="facialCareInput" value="yes" name="facial_care">
+                    <label for="facialCareInput">
+                            Facial Care
+                        </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input mb-1" type="checkbox" id="fullMasssageInput" value="yes" name="full_massage">
+                    <label for="fullMasssageInput">
+                            Full Massage
+                        </label>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="dateInput">
+                            Date
+                        </label>
+                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput" name="date">
+                    <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
+                            Time
+                        </label>
+                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="time" id="timeInput" name="time">
+                </div>
+
+                <div class="float-right">
+                    <button type="submit" class="btn btn-bg shadow-none">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
