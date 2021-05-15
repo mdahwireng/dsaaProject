@@ -14,6 +14,10 @@ app.get('/master', (req, res) => {
     res.render('master_view.html')
 });
 
+app.get('/master/add_transaction', (req, res) => {
+    res.render('add_transaction')
+});
+
 app.get('/', (req, res) => {
     res.render("index.html")
 });
