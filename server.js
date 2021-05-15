@@ -9,6 +9,11 @@ dotenv.config({ path: 'config.env' });
 
 const PORT = process.env.PORT || 8080;
 
+//routes
+app.get('/master', (req, res) => {
+    res.render('master_view.html')
+});
+
 app.get('/', (req, res) => {
     res.render("index.html")
 });
@@ -50,6 +55,7 @@ app.set('views', path.resolve(__dirname, "views"))
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 app.use('/node_modules', express.static(path.resolve(__dirname, "node_modules")));
+
 
 // API
 
