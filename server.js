@@ -58,6 +58,7 @@ app.set('views', path.resolve(__dirname, "views"))
 // load assets
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
+app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 app.use('/node_modules', express.static(path.resolve(__dirname, "node_modules")));
 
 
