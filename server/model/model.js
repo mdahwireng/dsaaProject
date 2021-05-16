@@ -6,8 +6,7 @@ var schema = new mongoose.Schema({
         require: true
     },
     "email": {
-        type: String,
-        require: true
+        type: String
     },
     "tel": {
         type: Number,
