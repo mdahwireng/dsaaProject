@@ -9,31 +9,6 @@ dotenv.config({ path: 'config.env' });
 
 const PORT = process.env.PORT || 8080;
 
-//routes
-app.get('/master', (req, res) => {
-    res.render('master_view.html')
-});
-
-app.get('/add_transaction', (req, res) => {
-    res.render('add_transaction.html')
-});
-
-app.get('/', (req, res) => {
-    res.render("index.html")
-});
-
-app.get('/services', (req, res) => {
-    res.render("services.html")
-});
-
-app.get('/gallery', (req, res) => {
-    res.render("gallery.html")
-});
-
-app.get('/message', (req, res) => {
-    res.render("message.html")
-});
-
 app.listen(PORT, () => {
     console.log(`server is running on http://localhost:${(PORT)}`)
 });
@@ -61,7 +36,5 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 app.use('/node_modules', express.static(path.resolve(__dirname, "node_modules")));
 
-
-// API
-
-app.post('/api/users', controller.create);
+// load routes
+app.use('/', require("./server/routes/router"));

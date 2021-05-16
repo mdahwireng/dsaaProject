@@ -36,3 +36,70 @@ exports.create = (req, res) => {
             res.status(500).send({ message: err.message || "some error occured while creating the create-data-operation" });
         })
 }
+
+// retrieve and return all users or a single user
+exports.find = (req, res) => {
+    if (req.query.id) {
+        const id = req.query.id;
+        Userdb.findById(id)
+            .then(data => {
+                if (!data) {
+                    res.status(404).send({ message: `Could not find transaction with id number ${id}.` })
+                } else {
+                    res.send(data)
+                }
+            })
+            .catch(err => {
+                res.status(500).send({ message: `Error retrieving transaction with id number ${id}` })
+            })
+    } else {
+        Userdb.find()
+            .then(user => {
+                res.send(user)
+            })
+            .catch(err => {
+                res.status(500).send({ message: err.message || "Error occured while retrieving user" })
+            })
+    }
+}
+
+// update user by user id
+exports.update = (req, res) => {
+    if (!req.body) {
+        return res.status(400).send({ message: "Data to update cannot be empty!" });
+    }
+    const id = req.params.id;
+    Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false, new: true })
+        .then(data => {
+            if (!data) {
+                res.status(404)
+                    .send({ message: `Cannot update transaction with ${id}. May be transaction not found` })
+            } else {
+                res.send(data)
+            }
+        })
+        .catch(err => {
+            res.status(500)
+                .send({ message: "Error update transaction information" })
+        })
+}
+
+
+// delete user by user id in request
+exports.delete = (req, res) => {
+    const id = req.params.id;
+
+    Userdb.findByIdAndDelete(id)
+        .then(data => {
+            if (!data) {
+                res.status(404)
+                    .send({ message: `Cannot delete transaction with id ${id}. Maybe id is wrong` })
+            } else {
+                res.send({ message: "Transaction was deleted successfully!" })
+            }
+        })
+        .catch(err => {
+            res.status(500)
+                .send({ message: `Could not delete transaction with id number ${id}` });
+        });
+}
