@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js"></script>
     <title>Master View</title>
 </head>
 
@@ -20,87 +19,88 @@
             <div>
                 <h4>Book A Session</h4>
             </div>
-            <form action="/api/users" method="post">
+            <form action="/api/users" method="post" id="reservation">
                 <h6>Personal Details</h6>
                 <div class="form-group row">
-                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="NameInput">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2 fill" for="NameInput">
                             Name
                         </label>
-                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2" type="text" placeholder="First Name and Last Name" id="NameInput" name="name" required="true">
+                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2" type="text" placeholder="First Name and Last Name" id="NameInput" name="name" required="true" value="<%=transactionData.name%>">
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
                             Email
                         </label>
-                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput" name="email">
+                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput" name="email" value="<%=transactionData.email%>">
                     <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
                             Tel
                         </label>
-                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="tel" id="telInput" name="tel" required="true">
+                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2 fill" type="tel" id="telInput" name="tel" required="true" value="<%=transactionData.tel%>">
                 </div>
 
                 <h6>Booking Details</h6>
                 <p>Please <b>select</b> what You want to be done for you</p>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1" type="checkbox" id="hairCutInput" value="Yes" name="hair_cut">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairCutInput" value="Yes" name="hair_cut">
                     <label for="hairCutInput">
                             Hair Cut
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1" type="checkbox" id="hairStylingInput" value="Yes" name="hair_styling">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairStylingInput" value="Yes" name="hair_styling">
                     <label for="hairStylingInput">
                             Hair Styling
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1" type="checkbox" id="hairColoringInput" value="Yes" name="hair_coloring">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairColoringInput" value="Yes" name="hair_coloring">
                     <label for="hairColoringInput">
                             Hair Coloring
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1" type="checkbox" id="hairLockingInput" value="Yes" name="hair_locking">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairLockingInput" value="Yes" name="hair_locking">
                     <label for="hairLockingInput">
                             Hair Locking
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1" type="checkbox" id="facialCareInput" value="Yes" name="facial_care">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="facialCareInput" value="Yes" name="facial_care">
                     <label for="facialCareInput">
                             Facial Care
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1" type="checkbox" id="fullMasssageInput" value="Yes" name="full_massage">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="fullMasssageInput" value="Yes" name="full_massage">
                     <label for="fullMasssageInput">
                             Full Massage
                         </label>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="dateInput">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2 fill" for="dateInput">
                             Date
                         </label>
-                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput" name="date" required="true">
+                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput" name="date" required="true" value="<%=transactionData.date%>">
                     <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
                             Time
                         </label>
-                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2" type="time" id="timeInput" name="time" required="true">
+                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2 fill" type="time" id="timeInput" name="time" required="true" value="<%=transactionData.time%>">
                 </div>
 
                 <div class="float-right">
                     <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-bg shadow-none">Submit</button>
+                    <button type="submit" class="btn btn-bg shadow-none" id="req_val">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

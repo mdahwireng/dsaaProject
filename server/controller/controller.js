@@ -29,10 +29,10 @@ exports.create = (req, res) => {
     user
         .save(user)
         .then(data => {
-            res.send(data)
+            res.send({ message: "Data Saved" })
         })
         .catch(err => {
-            res.status(500).send({ message: err.message || "some error occured while creating the create-data-operation" });
+            res.send({ message: err.message || "some error occured while creating the create-data-operation" });
         })
 }
 

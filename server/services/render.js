@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 exports.homeRoutes = (req, res) => {
     res.render("index.html");
 }
@@ -19,7 +21,13 @@ exports.masterRoutes = (req, res) => {
 }
 
 exports.addTransactionRoutes = (req, res) => {
-    res.render("add_transaction.html");
+    axios.get("http://localhost:3000/api/users", { params: { id: req.query.id } })
+        .then(function(trxnData) {
+            res.render("add_transaction.html", { transactionData: trxnData.data })
+        })
+        .catch(err => {
+            res.send(err.message);
+        })
 }
 
 exports.updateTransactionRoutes = (req, res) => {
