@@ -36,35 +36,80 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Nyarko Obuobi</td>
-                        <td>nbuob@gmail.com</td>
-                        <td>0240714589</td>
-                        <td>Yes</td>
-                        <td>No</td>
-                        <td>No</td>
-                        <td>No</td>
-                        <td>Yes</td>
-                        <td>No</td>
-                        <td>27/05/2021</td>
-                        <td>15:00</td>
-                        <td>Pending</td>
-                        <td></td>
-                        <td>
-                            <button>
-                                <a href='/add_transaction' data-toggle="tooltip" data-placement="bottom" title="edit"><i class="fa fa-pencil-square-o"></i></a>
-                            </button>
-                            <button>
-                                <a href='#' data-toggle="tooltip" data-placement="bottom" title="delete"><i class="fa fa-trash-o"></i></a>   
-                            </button>
-                        </td>
+                <tbody id="tableBody">
+
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+
+
+
+    <script>
+        fetch("/api/users")
+            .then(resp => resp.json())
+            .then(data => {
+                transactions = data
+            });
+
+
+        setTimeout(createTabel, 3000);
+
+
+        function createTabel() {
+            if (transactions.length === 0) {
+                document.write("There are no transactions");
+            } else {
+                var tableBody = document.getElementById("tableBody");
+
+                for (var i = 0; i < transactions.length; i++) {
+                    var row =
+                        `<tr>
+                            <td>${i+1}</td>
+                            <td>${(transactions[i].name === undefined)?"":transactions[i].name}</td>
+                            <td>${(transactions[i].email === undefined)?"":transactions[i].email}</td>
+                            <td>${(transactions[i].tel === undefined)?"":transactions[i].tel}</td>
+                            <td>${(transactions[i].hair_cut === undefined)?"":transactions[i].hair_cut}</td>
+                            <td>${(transactions[i].hair_styling === undefined)?"":transactions[i].hair_styling}</td>
+                            <td>${(transactions[i].hair_coloring === undefined)?"":transactions[i].hair_coloring}</td>
+                            <td>${(transactions[i].hair_locking === undefined)?"":transactions[i].hair_locking}</td>
+                            <td>${(transactions[i].facial_care === undefined)?"":transactions[i].facial_care}</td>
+                            <td>${(transactions[i].full_massage === undefined)?"":transactions[i].full_massage}</td>
+                            <td>${(transactions[i].date === undefined)?"":transactions[i].date}</td>
+                            <td>${(transactions[i].time === undefined)?"":transactions[i].time}</td>
+                            <td>${(transactions[i].status === undefined)?"":transactions[i].status}</td>
+                            <td>${(transactions[i].comment === undefined)?"":transactions[i].comment}</td>
+                            <td>
+                                <button>
+                                    <a href='/add_transactions?id=${transactions[i]._id}' data-toggle="tooltip" data-placement="bottom" title="edit"><i class="fa fa-pencil-square-o"></i></a>
+                                </button>
+                                <button>
+                                    <a href='#' data-toggle="tooltip" data-placement="bottom" title="delete"><i class="fa fa-trash-o"></i></a>   
+                                </button>
+                            </td>
+                        </tr>`;
+                    tableBody.innerHTML += row;
+
+                }
+            };
+        }
+
+
+
+        /* if (transactions === 0) {
+            document.write("There are no transactions")
+        } */
+
+        /* var triger = document.getElementsByClassName("triger");
+        const trig_array = [...triger];
+        [...triger].forEach(function(el) {
+            el.addEventListener('click', (e) => {
+                console.log(e.target.getAttribute("ID"))
+                console.log(window.location.href);
+            })
+        }) */
+    </script>
 </body>
 
 </html>
