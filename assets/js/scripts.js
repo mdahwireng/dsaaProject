@@ -18,6 +18,7 @@ function reqValidate(event) {
     for (var i = 0; i < reqCheckBoxes.length; i++) {
         if (reqCheckBoxes[i].checked) {
             form.submit();
+            alert("Data added successfully")
             break;
         }
 
