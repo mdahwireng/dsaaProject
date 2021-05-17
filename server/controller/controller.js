@@ -10,8 +10,7 @@ exports.create = (req, res) => {
 
     // new user
     const user = new Userdb({
-        first_name: req.body.first_name,
-        last_name: req.body.name,
+        name: req.body.name,
         email: req.body.email,
         tel: req.body.tel,
         hair_cut: req.body.hair_cut,

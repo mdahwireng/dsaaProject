@@ -14,33 +14,33 @@ var schema = new mongoose.Schema({
     },
     "hair_cut": {
         type: String,
-        enum: ['yes', 'no'],
-        default: 'no'
+        enum: ['Yes', 'No'],
+        default: 'No'
     },
     "hair_styling": {
         type: String,
-        enum: ['yes', 'no'],
-        default: 'no'
+        enum: ['Yes', 'No'],
+        default: 'No'
     },
     "hair_coloring": {
         type: String,
-        enum: ['yes', 'no'],
-        default: 'no'
+        enum: ['Yes', 'No'],
+        default: 'No'
     },
     "hair_locking": {
         type: String,
-        enum: ['yes', 'no'],
-        default: 'no'
+        enum: ['Yes', 'No'],
+        default: 'No'
     },
     "facial_care": {
         type: String,
-        enum: ['yes', 'no'],
-        default: 'no'
+        enum: ['Yes', 'No'],
+        default: 'No'
     },
     "full_massage": {
         type: String,
-        enum: ['yes', 'no'],
-        default: 'no'
+        enum: ['Yes', 'No'],
+        default: 'No'
     },
     "date": {
         type: String,
