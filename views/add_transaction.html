@@ -19,13 +19,14 @@
             <div>
                 <h4>Book A Session</h4>
             </div>
-            <form action="/api/users" method="post" id="reservation">
+            <form action="/api/users" method="Post" id="reservation">
                 <h6>Personal Details</h6>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2 fill" for="NameInput">
+                <div class="form-group row ">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2 fill " for="NameInput">
                             Name
                         </label>
-                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2" type="text" placeholder="First Name and Last Name" id="NameInput" name="name" required="true" value="<%=transactionData.name%>">
+                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2 " type="text" placeholder="First Name and Last Name " id="NameInput" name="name" required="true" value="<%=transactionData.name%>">
+                    <input type="hidden" name="id" value="<%=transactionData._id%>">
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
@@ -41,42 +42,42 @@
                 <h6>Booking Details</h6>
                 <p>Please <b>select</b> what You want to be done for you</p>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairCutInput" value="Yes" name="hair_cut">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairCutInput" value="Yes" name="hair_cut" <%=transactionData.hair_cut=="Yes" ? "checked": ""%>
                     <label for="hairCutInput">
                             Hair Cut
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairStylingInput" value="Yes" name="hair_styling">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairStylingInput" value="Yes" name="hair_styling" <%=transactionData.hair_styling=="Yes" ? "checked": ""%>
                     <label for="hairStylingInput">
                             Hair Styling
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairColoringInput" value="Yes" name="hair_coloring">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairColoringInput" value="Yes" name="hair_coloring" <%=transactionData.hair_coloring=="Yes" ? "checked": ""%>
                     <label for="hairColoringInput">
                             Hair Coloring
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairLockingInput" value="Yes" name="hair_locking">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="hairLockingInput" value="Yes" name="hair_locking" <%=transactionData.hair_locking=="Yes" ? "checked": ""%>
                     <label for="hairLockingInput">
                             Hair Locking
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="facialCareInput" value="Yes" name="facial_care">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="facialCareInput" value="Yes" name="facial_care" <%=transactionData.facial_care=="Yes" ? "checked": ""%>
                     <label for="facialCareInput">
                             Facial Care
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="fullMasssageInput" value="Yes" name="full_massage">
+                    <input class="form-check-input mb-1 req" type="checkbox" id="fullMasssageInput" value="Yes" name="full_massage" <%=transactionData.full_massage=="Yes" ? "checked": ""%>
                     <label for="fullMasssageInput">
                             Full Massage
                         </label>
@@ -100,7 +101,108 @@
             </form>
         </div>
     </div>
-    <script src="js/scripts.js"></script>
+    <script>
+        // from validation function
+        function reqValidate(event) {
+            event.preventDefault();
+            var reqFills = document.getElementsByClassName("fill")
+
+            for (var i = 0; i < reqFills.length; i++) {
+                //checks to see if required inputs are filled
+                if (reqFills[i].value === "") {
+                    alert("Please do not leave the name, tel, date and time blank")
+                    return
+                }
+            }
+
+            var reqCheckBoxes = document.getElementsByClassName("req");
+            //checks to see if a service is selected
+            for (var i = 0; i < reqCheckBoxes.length; i++) {
+                if (reqCheckBoxes[i].checked) {
+
+                    formContent = {}
+                    allFormContent = this.querySelectorAll('input')
+                    for (var i = 0; i < allFormContent.length; i++) {
+                        if ((allFormContent[i].type === "checkbox" && allFormContent[i].defaultChecked === true) || (allFormContent[i].type !== "checkbox")) {
+                            formContent[allFormContent[i].name] = allFormContent[i].value;
+                        }
+                    }
+
+                    var url = `http://localhost:3000/api/users/${formContent.id}`
+
+                    class EasyHTTP {
+
+                        // Make an HTTP PUT Request
+                        async put(url, data) {
+
+                            // Awaiting fetch which contains method,
+                            // headers and content-type and body
+                            const response = await fetch(url, {
+                                method: 'PUT',
+                                headers: {
+                                    'Content-type': 'application/json'
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            // Awaiting response.json()
+                            const resData = await response.json();
+
+                            // Return response data 
+                            return resData;
+                        }
+
+                        async delete(url) {
+
+                            // Awaiting fetch which contains method,
+                            // headers and content-type and body
+                            const response = await fetch(url, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-type': 'application/json'
+                                }
+                            });
+
+                            // Awaiting response.json()
+                            const resData = await response.json();
+
+                            // Return response data 
+                            return resData;
+                        }
+                    }
+                    // Instantiating new EasyHTTP class
+                    const http = new EasyHTTP;
+
+                    // Update Post
+                    http.put(url, formContent)
+
+                    // Resolving promise for response data
+                    .then(data => {
+                        alert(data.message);
+                        var success = {
+                            "message": "Transaction Updated Sucessfully"
+                        };
+                        if (JSON.stringify(data) == JSON.stringify(success)) {
+                            setTimeout(() => window.location.assign("/master"), 3000);
+                        } else {
+                            setTimeout(() => window.location.reload(), 3000);
+                        }
+                    })
+
+                    break;
+                }
+
+                if (i === reqCheckBoxes.length - 1) {
+                    alert("Select A Service");
+                }
+            }
+        }
+
+        // adds an event listener to the submit button
+        form = document.getElementById("reservation")
+        form.addEventListener("submit", reqValidate);
+        g = document.querySelector('form')
+    </script>
 </body>
 
 </html>

@@ -68,13 +68,13 @@ exports.update = (req, res) => {
         return res.status(400).send({ message: "Data to update cannot be empty!" });
     }
     const id = req.params.id;
-    Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false, new: true })
+    Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
             if (!data) {
                 res.status(404)
                     .send({ message: `Cannot update transaction with ${id}. May be transaction not found` })
             } else {
-                res.send(data)
+                res.send({ message: "Transaction Updated Sucessfully" })
             }
         })
         .catch(err => {
