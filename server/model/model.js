@@ -50,10 +50,10 @@ var schema = new mongoose.Schema({
         type: String,
         require: true
     },
-    "Status": {
+    "status": {
         type: String,
-        enum: ["in progress", "completed", "pending", "absent", "rescheduled"],
-        default: "pending"
+        enum: ["In progress", "Completed", "Pending", "Absent", "Rescheduled"],
+        default: "Pending"
     },
     "comment": {
         type: String

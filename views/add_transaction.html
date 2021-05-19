@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h3 class="bg-success text-center pb-2"> Transacton Management System </h3>
+    <h3 class="bg-success text-center pb-2 sticky-top"> Transacton Management System </h3>
     <div class="row table-responsive mt-5">
         <div class="container col-10">
             <a href="/master"><i class="fa fa-chevron-circle-left"></i>transactions</a>
@@ -22,62 +22,62 @@
             <form action="/api/users" method="Post" id="reservation">
                 <h6>Personal Details</h6>
                 <div class="form-group row ">
-                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2 fill " for="NameInput">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="NameInput">
                             Name
                         </label>
-                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2 " type="text" placeholder="First Name and Last Name " id="NameInput" name="name" required="true" value="<%=transactionData.name%>">
-                    <input type="hidden" name="id" value="<%=transactionData._id%>">
+                    <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2 fill input" type="text" placeholder="First Name and Last Name " id="NameInput" name="name" required="true" value="<%=transactionData.name%>">
+                    <input class="input" type="hidden" name="id" value="<%=transactionData._id%>">
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
                             Email
                         </label>
-                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="email" placeholder="example@sub.com" id="emailInput" name="email" value="<%=transactionData.email%>">
+                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2 fill input" type="email" placeholder="example@sub.com" id="emailInput" name="email" value="<%=transactionData.email%>">
                     <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="TelInput">
                             Tel
                         </label>
-                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2 fill" type="tel" id="telInput" name="tel" required="true" value="<%=transactionData.tel%>">
+                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2 fill input" type="tel" id="telInput" name="tel" required="true" value="<%=transactionData.tel%>">
                 </div>
 
                 <h6>Booking Details</h6>
                 <p>Please <b>select</b> what You want to be done for you</p>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairCutInput" value="Yes" name="hair_cut" <%=transactionData.hair_cut=="Yes" ? "checked": ""%>
+                    <input class="form-check-input mb-1 req input" type="checkbox" id="hairCutInput" value="Yes" name="hair_cut" <%=transactionData.hair_cut=="Yes" ? "checked": ""%>
                     <label for="hairCutInput">
                             Hair Cut
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairStylingInput" value="Yes" name="hair_styling" <%=transactionData.hair_styling=="Yes" ? "checked": ""%>
+                    <input class="form-check-input mb-1 req input" type="checkbox" id="hairStylingInput" value="Yes" name="hair_styling" <%=transactionData.hair_styling=="Yes" ? "checked": ""%>
                     <label for="hairStylingInput">
                             Hair Styling
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairColoringInput" value="Yes" name="hair_coloring" <%=transactionData.hair_coloring=="Yes" ? "checked": ""%>
+                    <input class="form-check-input mb-1 req input" type="checkbox" id="hairColoringInput" value="Yes" name="hair_coloring" <%=transactionData.hair_coloring=="Yes" ? "checked": ""%>
                     <label for="hairColoringInput">
                             Hair Coloring
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="hairLockingInput" value="Yes" name="hair_locking" <%=transactionData.hair_locking=="Yes" ? "checked": ""%>
+                    <input class="form-check-input mb-1 req input" type="checkbox" id="hairLockingInput" value="Yes" name="hair_locking" <%=transactionData.hair_locking=="Yes" ? "checked": ""%>
                     <label for="hairLockingInput">
                             Hair Locking
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="facialCareInput" value="Yes" name="facial_care" <%=transactionData.facial_care=="Yes" ? "checked": ""%>
+                    <input class="form-check-input mb-1 req input" type="checkbox" id="facialCareInput" value="Yes" name="facial_care" <%=transactionData.facial_care=="Yes" ? "checked": ""%>
                     <label for="facialCareInput">
                             Facial Care
                         </label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input mb-1 req" type="checkbox" id="fullMasssageInput" value="Yes" name="full_massage" <%=transactionData.full_massage=="Yes" ? "checked": ""%>
+                    <input class="form-check-input mb-1 req input" type="checkbox" id="fullMasssageInput" value="Yes" name="full_massage" <%=transactionData.full_massage=="Yes" ? "checked": ""%>
                     <label for="fullMasssageInput">
                             Full Massage
                         </label>
@@ -87,15 +87,29 @@
                     <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2 fill" for="dateInput">
                             Date
                         </label>
-                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2" type="date" id="dateInput" name="date" required="true" value="<%=transactionData.date%>">
+                    <input class="form-control col-sm-4 col-md-4 col-lg-5 m-2 input" type="date" id="dateInput" name="date" required="true" value="<%=transactionData.date%>">
                     <label class="col-sm-1 col-md-1 col-lg-1 col-form-label mt-2" for="timeInput">
                             Time
                         </label>
-                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2 fill" type="time" id="timeInput" name="time" required="true" value="<%=transactionData.time%>">
+                    <input class="form-control col-sm-3 col-md-3 col-lg-4 m-2 fill input" type="time" id="timeInput" name="time" required="true" value="<%=transactionData.time%>">
                 </div>
-
-                <div class="float-right">
-                    <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Close</button>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="statusInput">Status</label>
+                    <select class="form-control col-sm-4 col-md-4 col-lg-5 m-2 input" id="statusInput" name="status">
+                      <option value= "Pending" <%=transactionData.status=="Pending" ? "selected": ""%>>Pending</option>
+                      <option value = "In progress" <%=transactionData.status=="In Progress" ? "selected": ""%>>In progress</option>
+                      <option value= "Completed" <%=transactionData.status=="Completed" ? "selected": ""%>>Completed</option>
+                      <option value= "Absent" <%=transactionData.status=="Absent" ? "selected": ""%>>Absent</option>
+                      <option value=  "Rescheduled" <%=transactionData.status=="Rescheduled" ? "selected": ""%>>Rescheduled</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="commentInput">
+                        Comment
+                    </label>
+                    <textarea class="form-control input" id="commentInput" name="comment" value="<%=transactionData.comment%>"></textarea>
+                </div>
+                <div class="float-right mb-3">
                     <button type="submit" class="btn btn-bg shadow-none" id="req_val">Submit</button>
                 </div>
             </form>
@@ -106,7 +120,7 @@
         function reqValidate(event) {
             event.preventDefault();
             var reqFills = document.getElementsByClassName("fill")
-
+            console.log(reqFills.value);
             for (var i = 0; i < reqFills.length; i++) {
                 //checks to see if required inputs are filled
                 if (reqFills[i].value === "") {
@@ -121,12 +135,13 @@
                 if (reqCheckBoxes[i].checked) {
 
                     formContent = {}
-                    allFormContent = this.querySelectorAll('input')
+                    allFormContent = this.getElementsByClassName('input')
                     for (var i = 0; i < allFormContent.length; i++) {
-                        if ((allFormContent[i].type === "checkbox" && allFormContent[i].defaultChecked === true) || (allFormContent[i].type !== "checkbox")) {
+                        if ((allFormContent[i].type === "checkbox" && allFormContent[i].checked === true) || (allFormContent[i].type !== "checkbox")) {
                             formContent[allFormContent[i].name] = allFormContent[i].value;
                         }
                     }
+                    console.log(formContent);
 
                     var url = `http://localhost:3000/api/users/${formContent.id}`
 
@@ -151,24 +166,6 @@
                             // Return response data 
                             return resData;
                         }
-
-                        async delete(url) {
-
-                            // Awaiting fetch which contains method,
-                            // headers and content-type and body
-                            const response = await fetch(url, {
-                                method: 'DELETE',
-                                headers: {
-                                    'Content-type': 'application/json'
-                                }
-                            });
-
-                            // Awaiting response.json()
-                            const resData = await response.json();
-
-                            // Return response data 
-                            return resData;
-                        }
                     }
                     // Instantiating new EasyHTTP class
                     const http = new EasyHTTP;
@@ -182,11 +179,11 @@
                         var success = {
                             "message": "Transaction Updated Sucessfully"
                         };
-                        if (JSON.stringify(data) == JSON.stringify(success)) {
-                            setTimeout(() => window.location.assign("/master"), 3000);
-                        } else {
-                            setTimeout(() => window.location.reload(), 3000);
-                        }
+                        /*  if (JSON.stringify(data) == JSON.stringify(success)) {
+                             setTimeout(() => window.location.assign("/master"), 2000);
+                         } else {
+                             setTimeout(() => window.location.reload(), 3000);
+                         } */
                     })
 
                     break;
