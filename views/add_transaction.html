@@ -26,7 +26,7 @@
                             Name
                         </label>
                     <input class="form-control col-sm-8 col-md-8 col-lg-10 m-2 fill input" type="text" placeholder="First Name and Last Name " id="NameInput" name="name" required="true" value="<%=transactionData.name%>">
-                    <input class="input" type="hidden" name="id" value="<%=transactionData._id%>">
+                    <input class="input" type="hidden" name="id" value="<%=transactionData._id%>" PORT="<%=transactionData.PORT%>" id="hidden">
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-md-2 col-lg-1 col-form-label m-2" for="emailInput">
@@ -116,11 +116,53 @@
         </div>
     </div>
     <script>
+        class EasyHTTP {
+
+            // Make an HTTP PUT Request
+            async put(url, data) {
+
+                // Awaiting fetch which contains method,
+                // headers and content-type and body
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                // Awaiting response.json()
+                const resData = await response.json();
+
+                // Return response data 
+                return resData;
+            }
+
+            // Make an HTTP POST Request
+            async post(url, data) {
+
+                // Awaiting fetch which contains method,
+                // headers and content-type and body
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                // Awaiting response.json()
+                const resData = await response.json();
+
+                // Return response data 
+                return resData;
+            }
+        }
+
         // from validation function
         function reqValidate(event) {
             event.preventDefault();
-            var reqFills = document.getElementsByClassName("fill")
-            console.log(reqFills.value);
+            var reqFills = document.getElementsByClassName("fill");
             for (var i = 0; i < reqFills.length; i++) {
                 //checks to see if required inputs are filled
                 if (reqFills[i].value === "") {
@@ -142,50 +184,10 @@
                         }
                     }
 
-                    var url = `http://localhost:3000/api/users/${formContent.id}`
+                    PORT = document.getElementById("hidden").getAttribute("PORT");
+                    var url = `http://localhost:${PORT}/api/users/${formContent.id}`
 
-                    class EasyHTTP {
 
-                        // Make an HTTP PUT Request
-                        async put(url, data) {
-
-                            // Awaiting fetch which contains method,
-                            // headers and content-type and body
-                            const response = await fetch(url, {
-                                method: 'PUT',
-                                headers: {
-                                    'Content-type': 'application/json'
-                                },
-                                body: JSON.stringify(data)
-                            });
-
-                            // Awaiting response.json()
-                            const resData = await response.json();
-
-                            // Return response data 
-                            return resData;
-                        }
-
-                        // Make an HTTP POST Request
-                        async post(url, data) {
-
-                            // Awaiting fetch which contains method,
-                            // headers and content-type and body
-                            const response = await fetch(url, {
-                                method: 'POST',
-                                headers: {
-                                    'Content-type': 'application/json'
-                                },
-                                body: JSON.stringify(data)
-                            });
-
-                            // Awaiting response.json()
-                            const resData = await response.json();
-
-                            // Return response data 
-                            return resData;
-                        }
-                    }
                     // make a post request if form data has no id value
                     if (formContent.id === "") {
                         // Instantiating new EasyHTTP class
@@ -239,7 +241,6 @@
         // adds an event listener to the submit button
         form = document.getElementById("reservation")
         form.addEventListener("submit", reqValidate);
-        g = document.querySelector('form')
     </script>
 </body>
 

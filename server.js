@@ -7,7 +7,7 @@ const controller = require("./server/controller/controller");
 const app = express();
 dotenv.config({ path: 'config.env' });
 
-const PORT = process.env.PORT || 8080;
+PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
     console.log(`server is running on http://localhost:${(PORT)}`)
