@@ -200,11 +200,11 @@
                             var success = {
                                 message: "Data Saved"
                             };
-                            /*  if (JSON.stringify(data) == JSON.stringify(success)) {
-                                 setTimeout(() => window.location.assign("/master"), 2000);
-                             } else {
-                                 setTimeout(() => window.location.reload(), 3000);
-                             } */
+                            if (JSON.stringify(data) == JSON.stringify(success)) {
+                                window.location.assign("/master");
+                            } else {
+                                window.location.reload();
+                            }
                         })
                     } else {
                         // Instantiating new EasyHTTP class
@@ -219,11 +219,11 @@
                             var success = {
                                 "message": "Transaction Updated Sucessfully"
                             };
-                            /*  if (JSON.stringify(data) == JSON.stringify(success)) {
-                                 setTimeout(() => window.location.assign("/master"), 2000);
-                             } else {
-                                 setTimeout(() => window.location.reload(), 3000);
-                             } */
+                            if (JSON.stringify(data) == JSON.stringify(success)) {
+                                window.location.assign("/master");
+                            } else {
+                                window.location.reload();
+                            }
                         })
                     }
 
