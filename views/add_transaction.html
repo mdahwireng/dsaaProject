@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h3 class="bg-success text-center pb-2 sticky-top"> Transacton Management System </h3>
+    <h3 class="bg-success text-center pb-2 sticky-top"> Transaction Management System </h3>
     <div class="row table-responsive mt-5">
         <div class="container col-10">
             <a href="/master"><i class="fa fa-chevron-circle-left"></i>transactions</a>
@@ -141,7 +141,6 @@
                             formContent[allFormContent[i].name] = allFormContent[i].value;
                         }
                     }
-                    console.log(formContent);
 
                     var url = `http://localhost:3000/api/users/${formContent.id}`
 
@@ -166,25 +165,67 @@
                             // Return response data 
                             return resData;
                         }
+
+                        // Make an HTTP POST Request
+                        async post(url, data) {
+
+                            // Awaiting fetch which contains method,
+                            // headers and content-type and body
+                            const response = await fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-type': 'application/json'
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            // Awaiting response.json()
+                            const resData = await response.json();
+
+                            // Return response data 
+                            return resData;
+                        }
                     }
-                    // Instantiating new EasyHTTP class
-                    const http = new EasyHTTP;
+                    // make a post request if form data has no id value
+                    if (formContent.id === "") {
+                        // Instantiating new EasyHTTP class
+                        const http = new EasyHTTP;
 
-                    // Update Post
-                    http.put(url, formContent)
+                        // Update Post
+                        http.post(url, formContent)
 
-                    // Resolving promise for response data
-                    .then(data => {
-                        alert(data.message);
-                        var success = {
-                            "message": "Transaction Updated Sucessfully"
-                        };
-                        /*  if (JSON.stringify(data) == JSON.stringify(success)) {
-                             setTimeout(() => window.location.assign("/master"), 2000);
-                         } else {
-                             setTimeout(() => window.location.reload(), 3000);
-                         } */
-                    })
+                        // Resolving promise for response data
+                        .then(data => {
+                            alert(data.message);
+                            var success = {
+                                message: "Data Saved"
+                            };
+                            /*  if (JSON.stringify(data) == JSON.stringify(success)) {
+                                 setTimeout(() => window.location.assign("/master"), 2000);
+                             } else {
+                                 setTimeout(() => window.location.reload(), 3000);
+                             } */
+                        })
+                    } else {
+                        // Instantiating new EasyHTTP class
+                        const http = new EasyHTTP;
+
+                        // Update Post
+                        http.put(url, formContent)
+
+                        // Resolving promise for response data
+                        .then(data => {
+                            alert(data.message);
+                            var success = {
+                                "message": "Transaction Updated Sucessfully"
+                            };
+                            /*  if (JSON.stringify(data) == JSON.stringify(success)) {
+                                 setTimeout(() => window.location.assign("/master"), 2000);
+                             } else {
+                                 setTimeout(() => window.location.reload(), 3000);
+                             } */
+                        })
+                    }
 
                     break;
                 }
