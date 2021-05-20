@@ -20,7 +20,7 @@ exports.masterRoutes = (req, res) => {
 }
 
 exports.addTransactionRoutes = (req, res) => {
-    axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
+    axios.get('https://alphamalegrooming.herokuapp.com/api/users', { params: { id: req.query.id } })
         .then(function(trxnData) {
             res.render("add_transaction.html", { transactionData: trxnData.data })
         })
