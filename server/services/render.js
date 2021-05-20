@@ -1,5 +1,4 @@
 const { default: axios } = require("axios");
-const PORT = process.env.PORT;
 exports.homeRoutes = (req, res) => {
     res.render("index.html");
 }
@@ -21,9 +20,8 @@ exports.masterRoutes = (req, res) => {
 }
 
 exports.addTransactionRoutes = (req, res) => {
-    axios.get(`http://localhost:${PORT}/api/users`, { params: { id: req.query.id } })
+    axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
         .then(function(trxnData) {
-            trxnData.data['PORT'] = PORT;
             res.render("add_transaction.html", { transactionData: trxnData.data })
         })
         .catch(err => {

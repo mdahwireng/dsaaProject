@@ -109,7 +109,7 @@
                                     <a href='/add_transaction?id=${transactions[i]._id}' data-toggle="tooltip" data-placement="bottom" title="edit"><i class="fa fa-pencil-square-o"></i></a>
                                 </button>
                                 <button>
-                                    <a data-toggle="tooltip" href="#" data-placement="bottom" title="delete"><i class="fa fa-trash-o delete" name="${transactions[i].name}" transaction_id='${transactions[i]._id}' PORT='${transactions[i].PORT}' id="delete"></i></a>   
+                                    <a data-toggle="tooltip" href="#" data-placement="bottom" title="delete"><i class="fa fa-trash-o delete" name="${transactions[i].name}" transaction_id='${transactions[i]._id}' id="delete"></i></a>   
                                 </button>
                             </td>
                         </tr>`;
@@ -118,12 +118,10 @@
                 }
             };
             const deleteBtns = document.getElementsByClassName('delete');
-            PORT = document.getElementById("delete").getAttribute("PORT");
             for (var i = 0; i < deleteBtns.length; i++) {
-
                 deleteBtns[i].addEventListener('click', function() {
                     var id = this.getAttribute("transaction_id");
-                    var url = `http://localhost:${PORT}/api/users/${id}`;
+                    var url = `/api/users/${id}`;
                     var transactionName = this.getAttribute("name");
                     if (confirm(`Do you want to delete transcation with name ${transactionName}`)) {
                         const http = new EasyHTTP;
